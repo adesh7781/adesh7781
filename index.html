@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Companion</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Campus Companion</h1>
+    <p>A simple all-in-one app for college students.</p>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Quick Tasks</h2>
+      <form id="task-form">
+        <input id="task-input" type="text" placeholder="Add assignment or reminder" required />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="task-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Class Schedule</h2>
+      <form id="class-form">
+        <input id="class-name" type="text" placeholder="Class name" required />
+        <input id="class-time" type="time" required />
+        <button type="submit">Add Class</button>
+      </form>
+      <ul id="class-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>GPA Estimator</h2>
+      <form id="gpa-form" class="gpa-grid">
+        <input id="credit-hours" type="number" min="1" max="6" placeholder="Credit hours" required />
+        <select id="grade" required>
+          <option value="">Grade</option>
+          <option value="4.0">A</option>
+          <option value="3.0">B</option>
+          <option value="2.0">C</option>
+          <option value="1.0">D</option>
+          <option value="0.0">F</option>
+        </select>
+        <button type="submit">Add Course</button>
+      </form>
+      <ul id="gpa-list"></ul>
+      <p class="result">Estimated GPA: <strong id="gpa-result">0.00</strong></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
