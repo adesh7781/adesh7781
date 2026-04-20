@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Message Encryption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🔐 Secure Message Encryption</h1>
+      <p class="subtitle">
+        Mini project using Python + Flask + Cryptography with an interactive HTML/CSS/JS UI.
+      </p>
+
+      <section class="panel">
+        <h2>Encrypt</h2>
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Type your secret message"></textarea>
+
+        <label for="encrypt-password">Secret Key</label>
+        <input id="encrypt-password" type="password" placeholder="Enter a secret key" />
+
+        <button id="encrypt-btn">Encrypt Message</button>
+
+        <label for="ciphertext">Encrypted Output</label>
+        <textarea id="ciphertext" rows="4" readonly placeholder="Encrypted text appears here"></textarea>
+      </section>
+
+      <section class="panel">
+        <h2>Decrypt</h2>
+        <label for="decrypt-password">Secret Key</label>
+        <input id="decrypt-password" type="password" placeholder="Use the same secret key" />
+
+        <button id="decrypt-btn">Decrypt Message</button>
+
+        <label for="plaintext">Decrypted Output</label>
+        <textarea id="plaintext" rows="4" readonly placeholder="Original message appears here"></textarea>
+      </section>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
